@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+/* 300 [...] 600 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --cor01: #6f96cb;
+    --cor02: #A3BDED;
+
+    --font-padrao: 'Raleway', sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-padrao);
+}
+
+main {
+    width: 60vw;
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.475);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+}
+
+main > section {
+    width: 50%;
+    height: 100%;
+}
+
+main > .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9258B1;
+    border-radius: 20px;
+}
+main > .img img {
+    width: 80%;
+}
+
+main > .conteudo {
+    text-align: center;
+}
+main > .conteudo h1 {
+    margin: 50px 0px 0px 0px;
+    font-size: 2.6em;
+    font-weight: 600
+}
+main > .conteudo p#bemvindo {
+    margin: 20px 0px 0px 0px;
+    font-size: 1.13em;
+    font-weight: 400;
+}
+main > .conteudo .inputs {
+    text-align: center;
+}
+main > .conteudo .inputs #two,#one {
+    display: block;
+    margin-top: 5px;
+}
+main > .conteudo .inputs #two {
+    margin-bottom: 15px;
+}
+main > .conteudo .inputs input {
+    display: block;
+    margin:  0px auto 0px auto;
+    width: 70%;
+    height: 3em;
+    font-size: 1em;
+    font-family: var(--font-padrao);
+    padding: 0px 15px;
+    border-radius: 10px;
+    border: none;
+}
+main > .conteudo .inputs input:focus {
+    outline: none;
+}
+main > .conteudo .inputs input#input-username {
+    margin-top: 20px;
+}
+main > .conteudo .inputs input#input-password {
+    margin-top: 15px;
+}
+main > .conteudo .inputs button {
+    display: block;
+    margin:  0px auto 30px auto;
+    width: 70%;
+    height: 3em;
+    font-size: 1em;
+    font-family: var(--font-padrao);
+    padding: 0px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #9258B1;
+    font-weight: 500;
+}
+main > .conteudo .inputs button:hover {
+    background-color: #663b7d;
+    font-weight: 600;
+}
+
+main > .conteudo nav {
+    width: 70%;
+    height: 60px;
+    margin: 20px auto 0px auto;
+}
+main > .conteudo nav ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.icons img {
+    cursor: pointer;
+    padding: 20px;
+    width: 70px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+.icons img:hover {
+    background-color: rgba(255, 255, 255, 0.682);
+}
+.icons img#apple {
+    height: 70px;
+}
+
+
+/* Classes JS */
+main > .conteudo .true input {
+    border: 2px solid rgb(165, 255, 165);
+}
+main > .conteudo .true small {
+    color: rgb(0, 140, 0);
+}
+
+main > .conteudo .erro input {
+    border: 2px solid rgb(255, 128, 128);
+}
+main > .conteudo .erro small {
+    color: rgb(108, 0, 0);
+}
+
+
+
+/* Media queries */
+@media (max-width: 1150px) {
+    main {
+        width: 80%;
+    }
+    main > .conteudo nav ul {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        width: 100%;
+        height: 120vh;
+        align-items: flex-start;
+    }
+    main {
+        margin-top: 40px;
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+    main > section {
+        width: 100%;
+        height: 50%;
+    }
+    main > section.img {
+        height: 40%;
+    }
+    main > section.conteudo {
+        height: 60%;
+    }
+    main > .img img {
+        width: 60%;
+    }
+    main > .conteudo h1 {
+        margin: 25px 0px 0px 0px;
+        font-size: 2.4em;
+        font-weight: 600
+    }
+    main > .conteudo p#bemvindo {
+        margin: 10px 0px 0px 0px;
+        font-size: 1.05em;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 650px) {
+    main > .conteudo .inputs input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        height: 100vh;
+    }
+    main {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    main > .conteudo h1 {
+        font-size: 2em;
+    }
+    main > .conteudo p#bemvindo {
+        font-size: 1em;
+    }
+    main > section.img {
+        height: 38%;
+    }
+    main > section.conteudo {
+        height: 62%;
+    }
+    main > .conteudo nav ul {
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    main > .conteudo nav {
+        width: 80%;
+        height: 60px;
+        margin: 20px auto 0px auto;
+    }
+
+    .icons img {
+        padding: 17px;
+        width: 60px;
+    }
+    .icons img#apple {
+        height: 60px;
+    }
+}
+
+@media (max-width: 390px) {
+    body {
+        height: 700px;
+    }
+    main {
+        width: 80%;
+        height: auto;
+    }
+    main > section.img {
+        height: 40%;
+    }
+    main > section.conteudo {
+        height: 70%;
+    }
+    main > .conteudo h1 {
+        font-size: 2.2em;
+    }
+    main > .conteudo p#bemvindo {
+        font-size: 1em;
+    }
+    main > .conteudo .inputs input {
+        height: 2.5em;
+    }
+
+    .icons img {
+        padding: 15px;
+        width: 55px;
+    }
+    .icons img#apple {
+        height: 55px;
+    }
+}
+
+@media (max-width: 335px) {
+    small {
+        font-size: small;
+    }
+}
