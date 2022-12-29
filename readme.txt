@@ -1,1 +1,0 @@
-Um cara do zap postou um site parecido, então decidi tentar fazer igual.
