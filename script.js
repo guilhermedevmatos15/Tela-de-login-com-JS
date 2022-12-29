@@ -9,27 +9,46 @@ const inputPassword = document.querySelector('input#input-password');
 const smallUser = document.querySelector('div#input-user > small');
 const smallPassword = document.querySelector('div#input-password > small');
 
-inputUser.addEventListener('keyup', () => {
+
+function validUser() {
    divUser.classList='';
    smallUser.innerHTML='';
 
    if (inputUser.value.length < 3 || inputUser.value.length > 20) {
       divUser.classList.add('erro');
       smallUser.innerHTML='Usuario Inválido';
+      return false;
    } else {
       divUser.classList.add('true');
       smallUser.innerHTML='Usuario válido';
+      return true;
    }
-});
-inputPassword.addEventListener('keyup', () => {
+}
+function validPassword() {
    divPassword.classList='';
    smallPassword.innerHTML='';
 
    if (inputPassword.value.length < 8) {
       divPassword.classList.add('erro');
       smallPassword.innerHTML='Senha Inválida';
+      return false;
    } else {
       divPassword.classList.add('true');
       smallPassword.innerHTML='Senha válida';
+      return true;
    }
-});
+}
+
+inputUser.addEventListener('keyup', validUser);
+inputPassword.addEventListener('keyup', validPassword);
+button.addEventListener('click', () => {
+   if (validUser() == true && validPassword() == true) {
+      // Zerando tudo (simulando como se fosse um submit)
+      divUser.classList='';
+      smallUser.innerHTML='';
+      divPassword.classList='';
+      smallPassword.innerHTML='';
+      inputUser.value='';
+      inputPassword.value='';
+   }
+})
