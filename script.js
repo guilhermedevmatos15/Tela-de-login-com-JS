@@ -44,7 +44,7 @@ inputUser.addEventListener('keyup', validations.user);
 inputPassword.addEventListener('keyup', validations.password);
 
 button.addEventListener('click', () => {
-   if (validations.user() == true && validations.password() == true) {
+   if (validations.user() === true && validations.password() === true) {
       // Zerando tudo (simulando como se fosse um submit)
       divUser.classList='';
       smallUser.innerHTML='';
